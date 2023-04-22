@@ -66,7 +66,7 @@ const Home: NextPage = () => {
           
         </div>
         
-        {/* Add the CardSlider component where you want it to appear */}
+   
        
        
       </main>
