@@ -66,9 +66,7 @@ const Home: NextPage = () => {
           
         </div>
         
-   
-       
-       
+  
       </main>
       <Testimonials />
       <Footer />
