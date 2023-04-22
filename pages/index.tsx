@@ -6,20 +6,11 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Testimonials } from "../components/Testimonials";
 import React from 'react';
-import CardSlider from '../components/CardSlider';
+
 
 
 const Home: NextPage = () => {
-  const items = [
-    { title: 'home1', content: 'This is the content for card 1.' },
-    { title: 'home2', content: 'This is the content for home2.' },
-    { title: 'home2', content: 'This is the content for home2.' },
-    { title: 'home2', content: 'This is the content for home2.' },
-    { title: 'home2', content: 'This is the content for home2.' },
-    { title: 'home2', content: 'This is the content for home2.' },
-    // Add more cards as needed
-  ];
-
+  
   return (
     <div className="flex max-w-9xl max-h-3xl bg-stone-900 rounded-3xl  
    mx-auto flex-col items-center justify-center py-3 px-3 min-h-screen">
