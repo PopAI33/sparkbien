@@ -23,12 +23,15 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Toaster, toast } from "react-hot-toast";
 
+
 // Configuration for the uploader
 const uploader = Uploader({
   apiKey: !!process.env.NEXT_PUBLIC_UPLOAD_API_KEY
     ? process.env.NEXT_PUBLIC_UPLOAD_API_KEY
     : "free",
 });
+
+
 
 const Home: NextPage = () => {
   const [originalPhoto, setOriginalPhoto] = useState<string | null>(null);
@@ -52,7 +55,7 @@ const Home: NextPage = () => {
     tags: [data?.remainingGenerations > 3 ? "paid" : "free"],
     styles: {
       colors: {
-        primary: "#2563EB", // Primary buttons & links
+        primary: "#d5d3d1", // Primary buttons & links
         error: "#d23f4d", // Error messages
         shade100: "#fff", // Standard text
         shade200: "#fffe", // Secondary button text
@@ -124,43 +127,43 @@ const Home: NextPage = () => {
   }, [router.query.success]);
 
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="bg-white  rounded-3xl mt-6 mr-6 ml-6 flex  mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>RoomGPT</title>
+        <title>Sparkitect</title>
       </Head>
       <Header
         photo={session?.user?.image || undefined}
         email={session?.user?.email || undefined}
       />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
+      <main className="flex max-w-7xl flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
         {status === "authenticated" ? (
           <Link
             href="/buy-credits"
-            className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 hover:scale-105 transition"
+            className="flex max-w-fit mb-12 items-center justify-center space-x-2 rounded-full text-grey-800 mt-11 px-14 py-5 text-xl shadow-md hover:bg-stone-300 bg-gradient-to-br from-green-400 to-blue-500 font-medium transition-all hover:opacity-90 hover:scale-95 transtion-all duration-900"
           >
-            Pricing is now available.{" "}
-            <span className="font-semibold text-gray-200">Click here</span> to
-            buy credits!
+            Too much creativity? {" "}
+            
+            Buy credits!
           </Link>
         ) : (
           <a
             href="https://twitter.com/nutlope/status/1635674124738523139?cxt=HHwWhsCz1ei8irMtAAAA"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 transition"
+            className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-900 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 transition"
           >
             Over{" "}
-            <span className="font-semibold text-gray-200">1 million users</span>{" "}
-            have used roomGPT so far
+            <span className="font-semibold text-gray-900">100k users</span>{" "}
+            have used Sparkitect so far
           </a>
         )}
-        <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-blue-600">dream</span> room
+        <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-gray-900 sm:text-6xl mb-5">
+          Generate your <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-teal-500">dream</span> home
         </h1>
         {status === "authenticated" && data && !restoredImage && (
-          <p className="text-gray-400">
+          <p className="text-gray-800">
             You have{" "}
-            <span className="font-semibold text-gray-300">
+            <span className="font-semibold text-gray-600">
               {data.remainingGenerations}{" "}
               {data?.remainingGenerations > 1 ? "credits" : "credit"}
             </span>{" "}
@@ -170,7 +173,7 @@ const Home: NextPage = () => {
                 Buy more credits{" "}
                 <Link
                   href="/buy-credits"
-                  className="font-semibold text-gray-300 underline underline-offset-2 hover:text-gray-200 transition"
+                  className="font-semibold text-gray-600 underline underline-offset-2 hover:text-gray-900 transition"
                 >
                   here
                 </Link>
@@ -223,12 +226,12 @@ const Home: NextPage = () => {
                   <div className="space-y-4 w-full max-w-sm">
                     <div className="flex mt-3 items-center space-x-3">
                       <Image
-                        src="/number-1-white.svg"
+                        src="/knob.svg"
                         width={30}
                         height={30}
                         alt="1 icon"
                       />
-                      <p className="text-left font-medium">
+                      <p className="text-left text-gray-400 font-medium">
                         Choose your room theme.
                       </p>
                     </div>
@@ -239,10 +242,10 @@ const Home: NextPage = () => {
                       themes={themes}
                     />
                   </div>
-                  <div className="space-y-4 w-full max-w-sm">
+                  <div className="space-y-4  text-gray-400 w-full max-w-sm">
                     <div className="flex mt-10 items-center space-x-3">
                       <Image
-                        src="/number-2-white.svg"
+                        src="/home.svg"
                         width={30}
                         height={30}
                         alt="1 icon"
@@ -261,13 +264,13 @@ const Home: NextPage = () => {
                   <div className="mt-4 w-full max-w-sm">
                     <div className="flex mt-6 w-96 items-center space-x-3">
                       <Image
-                        src="/number-3-white.svg"
+                        src="/generate.svg"
                         width={30}
                         height={30}
                         alt="1 icon"
                       />
-                      <p className="text-left font-medium">
-                        Upload a picture of your room.
+                      <p className="text-left text-gray-400 font-medium">
+                        Upload your picture
                       </p>
                     </div>
                   </div>
@@ -276,7 +279,7 @@ const Home: NextPage = () => {
               ) : (
                 !originalPhoto && (
                   <div className="h-[250px] flex flex-col items-center space-y-6 max-w-[670px] -mt-8">
-                    <div className="max-w-xl text-gray-300">
+                    <div className="max-w-xl text-gray-500">
                       Sign in below with Google to create a free account and
                       redesign your room today. You will get 3 generations for
                       free.
@@ -312,7 +315,7 @@ const Home: NextPage = () => {
                     <Image
                       alt="original photo"
                       src={originalPhoto}
-                      className="rounded-2xl relative w-full h-96"
+                      className="rounded-2xl object-fill relative w-full h-96"
                       width={475}
                       height={475}
                     />
@@ -323,7 +326,7 @@ const Home: NextPage = () => {
                       <Image
                         alt="restored photo"
                         src={restoredImage}
-                        className="rounded-2xl relative sm:mt-0 mt-2 cursor-zoom-in w-full h-96"
+                        className="rounded-2xl object-fill relative sm:mt-0 mt-2 cursor-zoom-in w-full h-96"
                         width={475}
                         height={475}
                         onLoadingComplete={() => setRestoredLoaded(true)}

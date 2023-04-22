@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"zarifprogrammer.tailwind-snippets",
+			"bourhaouta.tailwindshades"
+		]
+	}
+}

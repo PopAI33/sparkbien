@@ -27,7 +27,7 @@ const testimonials = [
     {
       content:
         "This is incredible, you don't need an interior designer anymore.",
-      link: "https://www.tiktok.com/@thenubians/video/7206088336044313861?q=roomgpt.io&t=1677909079689",
+      link: "https://www.tiktok.com/@thenubians/video/7206088336044313861?q=sparkitect.co&t=1677909079689",
       author: {
         name: "Ade Dada",
         role: "Startup Founder",
@@ -45,27 +45,7 @@ const testimonials = [
       },
     },
   ],
-  [
-    {
-      content:
-        "This is fantastic. I've already decided on a new wall color from a generated image and repainting it is now my weekend project.",
-      link: "https://twitter.com/Music4UsAll/status/1631622608595607552",
-      author: {
-        name: "Music",
-        role: "Some dude on the internet",
-        image: "/music.jpg",
-      },
-    },
-    {
-      content: "🤯",
-      link: "https://twitter.com/github/status/1631821360619028482",
-      author: {
-        name: "GitHub",
-        role: "The one and only",
-        image: "/github.jpg",
-      },
-    },
-  ],
+ 
 ];
 
 export function Testimonials() {
@@ -73,20 +53,20 @@ export function Testimonials() {
     <section
       id="testimonials"
       aria-label="What our customers are saying"
-      className="py-10"
+      className="z-10 flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:-mt-10 -mt-10 bg-white"
     >
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7">
+      <div className="mt-20 mb-20 mx-auto px-4 sm:px-6 lg:px-8 md:px-7">
         <div className="mx-auto md:text-center">
-          <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-gray-300 sm:text-6xl">
-            Loved by many worldwide.
+          <h1 className="mx-auto max-w-4xl font-display text-2xl tracking-tight font-medium text-black sm:text-6xl">
+            Join the Sparkitect revolution!
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg sm:text-gray-400  text-gray-500 leading-7">
-            See what our over 1 million users are saying about the product.
+          <p className="mx-auto mt-6 max-w-xl text-lg sm:text-stone-400  text-gray-500 leading-7">
+            See what our first 100k users are saying about the product.
           </p>
         </div>
         <ul
           role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-16 lg:max-w-none lg:grid-cols-3"
+          className="flex justify-center content-center mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-16 lg:max-w-none lg:grid-cols-2"
         >
           {testimonials.map((column, columnIndex) => (
             <li key={columnIndex}>
@@ -94,21 +74,21 @@ export function Testimonials() {
                 {column.map((testimonial, testimonialIndex) => (
                   <li
                     key={testimonialIndex}
-                    className="hover:scale-105 transition duration-300 ease-in-out "
+                    className="hover:scale-105 transition duration-500 ease-in-out "
                   >
                     <a href={testimonial.link} target="_blank" rel="noreferrer">
-                      <figure className="relative rounded-2xl bg-gray-600 p-6 shadow-xl shadow-slate-900/10">
+                      <figure className="relative text-right rounded-3xl bg-zinc-100 p-6 shadow-xl shadow-grey-200">
                         <blockquote className="relative">
-                          <p className="text-lg tracking-tight text-white">
+                          <p className="text-lg tracking-tight text-stone-600">
                             "{testimonial.content}"
                           </p>
                         </blockquote>
-                        <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                        <figcaption className="relative mt-6 flex items-left justify-between border-t border-slate-100 pt-6">
                           <div>
-                            <div className="font-display text-base text-white">
+                            <div className="font-display text-left text-base text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-teal-500 text-white">
                               {testimonial.author.name}
                             </div>
-                            <div className="mt-1 text-sm text-gray-400">
+                            <div className="mt-1 text-left text-sm text-gray-400">
                               {testimonial.author.role}
                             </div>
                           </div>
