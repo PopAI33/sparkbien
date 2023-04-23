@@ -127,7 +127,7 @@ const Home: NextPage = () => {
   }, [router.query.success]);
 
   return (
-    <div className="bg-white  rounded-3xl mt-6 mr-6 ml-6 flex  mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="bg-white  rounded-3xl mb-6 mt-6 mr-6 ml-6 flex  mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>Sparkitect</title>
       </Head>
@@ -147,7 +147,7 @@ const Home: NextPage = () => {
           </Link>
         ) : (
           <a
-            href="https://twitter.com/nutlope/status/1635674124738523139?cxt=HHwWhsCz1ei8irMtAAAA"
+            
             target="_blank"
             rel="noopener noreferrer"
             className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-900 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 transition"

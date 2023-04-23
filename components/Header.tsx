@@ -10,10 +10,10 @@ export default function Header({
 }) {
   return (
     <header className="flex z-50 flex-col xs:flex-row rounded-full justify-between items-center w-full h-20 sm:px-7 px-7 bg-white">
-      <Link href="/dream" className="flex space-x-2">
+      <Link href="/index" className="flex space-x-2">
         <Image
           alt="header text"
-          src="/sparkitect_logo_black.svg"
+          src="/Sparkitect_Logo_Black.svg"
           className="sm:w-160 sm:h-9 w-19 h-9 "
 
           width={199}

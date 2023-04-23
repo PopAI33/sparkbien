@@ -7,11 +7,11 @@ export default function Footer() {
         Powered by{" "}
         
         <a
-          href="https://vercel.com/"
+        
           target="_blank"
           className="font-bold hover:underline transition hover:text-gray-300 underline-offset-2 sm:pb-10 mb-5"
         >
-          Pinecone
+          PopUpAI
         </a>
       </div>
       <div className="flex space-x-8 pb-11 mr-10 sm:pb-5">

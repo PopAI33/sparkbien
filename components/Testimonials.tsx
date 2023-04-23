@@ -4,7 +4,7 @@ const testimonials = [
   [
     {
       content: "So good! I need this right now. Congrats on the launch!",
-      link: "https://twitter.com/eveporcello/status/1631438728999899136",
+      link: "https://twitter.com/eveporcello/sta",
       author: {
         name: "Eve Porcello",
         role: "Engineer & Author",
@@ -15,7 +15,7 @@ const testimonials = [
     {
       content:
         "Finally! Something to help me get over my indecisiveness when decorating my house!",
-      link: "https://twitter.com/arthur_dvorkin/status/1631402865209274369",
+      link: "https://twitter.com/arthur_dvorkin/sta",
       author: {
         name: "Arthur Dvorkin",
         role: "Engineer",
@@ -26,8 +26,8 @@ const testimonials = [
   [
     {
       content:
-        "This is incredible, you don't need an interior designer anymore.",
-      link: "https://www.tiktok.com/@thenubians/video/7206088336044313861?q=sparkitect.co&t=1677909079689",
+        "This is incredible, I can't believe how fast this generates a total new render of my room. I'm so excited to use this!",
+      link: "https://www.tiktok.com/@thenubians/vide",
       author: {
         name: "Ade Dada",
         role: "Startup Founder",
@@ -37,7 +37,7 @@ const testimonials = [
     {
       content:
         "I haven't changed my room layout for 5 years, but this app may change that. Great job.",
-      link: "https://twitter.com/RobAttfield/status/1631545265281974273",
+      link: "https://twitter.com/RobAttfi",
       author: {
         name: "Rob Attfield",
         role: "Software Engineer",
@@ -72,11 +72,7 @@ export function Testimonials() {
             <li key={columnIndex}>
               <ul role="list" className="flex flex-col gap-y-6 sm:gap-y-8">
                 {column.map((testimonial, testimonialIndex) => (
-                  <li
-                    key={testimonialIndex}
-                    className="hover:scale-105 transition duration-500 ease-in-out "
-                  >
-                    <a href={testimonial.link} target="_blank" rel="noreferrer">
+                  
                       <figure className="relative text-right rounded-3xl bg-zinc-100 p-6 shadow-xl shadow-grey-200">
                         <blockquote className="relative">
                           <p className="text-lg tracking-tight text-stone-600">
@@ -103,8 +99,8 @@ export function Testimonials() {
                           </div>
                         </figcaption>
                       </figure>
-                    </a>
-                  </li>
+                    
+                 
                 ))}
               </ul>
             </li>
