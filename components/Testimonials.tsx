@@ -14,7 +14,7 @@ const testimonials = [
 
     {
       content:
-        "Finally! Something to help me get over my indecisiveness when decorating my house!",
+        "Finally! I'm re-decorating my house!",
       link: "https://twitter.com/arthur_dvorkin/sta",
       author: {
         name: "Arthur Dvorkin",
@@ -26,7 +26,7 @@ const testimonials = [
   [
     {
       content:
-        "This is incredible, I can't believe how fast this generates a total new render of my room. I'm so excited to use this!",
+        "This is incredible, I can't believe how fast this generates my new room.",
       link: "https://www.tiktok.com/@thenubians/vide",
       author: {
         name: "Ade Dada",

@@ -25,7 +25,7 @@ export default function Pricing() {
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mb-0 mb-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            <p className="mt-2 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
               Buy Sparkitect Credits
             </p>
           </div>
@@ -42,16 +42,15 @@ export default function Pricing() {
       <div className="w-full">
         {session?.user?.email && (
           // @ts-ignore
-          <stripe-pricing-table className="bg-white"
-            pricing-table-id="prctbl_1MobnNK4W9ejG97elHjeFCEq"
-            publishable-key="pk_live_51HGpOvK4W9ejG97eYSm02d1hgagCOAAcKQCtH7258w6fA8wxo2PRv2xs2wSUG2xkV2YLBc0h3HxKITTFeJGtWai500o6bqGFHF"
+         <stripe-pricing-table pricing-table-id="prctbl_1N04rZHlORwDal81jwEY6ZP2"
+          publishable-key="pk_live_51N03iJHlORwDal817B7fpTzLwwDjdXaHD57glWhkHocCDtfNf43Bl9FJtff4tTaibLuYmPfJBC7Y7XBMRU2pwETt00gunBBvgO"
             client-reference-id={session.user.email}
             customer-email={session.user.email}
           />
         )}
       </div>
       <div className="mt-10 text-center">
-        <h4 className="flex-none leading-6 mt-2 text-2xl font-bold tracking-tight text-white sm:text-5xl">
+        <h4 className="flex-none leading-6 mt-2 text-2xl font-bold tracking-tight text-gray-800 sm:text-5xl">
           What’s included
         </h4>
       </div>

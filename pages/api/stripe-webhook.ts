@@ -8,6 +8,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2022-11-15",
 });
 
+
+
 export const config = {
   api: {
     bodyParser: false,
@@ -59,23 +61,16 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       // @ts-ignore
       switch (paymentIntent.amount_subtotal) {
-        case 500:
-        case 1000:
+        case 900:
+          creditAmount = 10;
+          break;
+        case 1699:
           creditAmount = 20;
           break;
-        case 1900:
-        case 3000:
-          creditAmount = 100;
+        case 2399:
+          creditAmount = 30;
           break;
-        case 3500:
-        case 5000:
-          creditAmount = 250;
-          break;
-        case 7000:
-        case 7900:
-        case 10000:
-          creditAmount = 750;
-          break;
+       
       }
       await prisma.user.update({
         where: {

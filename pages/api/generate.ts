@@ -77,9 +77,11 @@ export default async function handler(
             image: imageUrl,
             structure: "hough",
             prompt: prompt,
+            image_resolution: 768,
             scale: 9,
+  
             a_prompt:
-              "best quality, photo from Pinterest, interior, cinematic photo, ultra-detailed, ultra-realistic, award-winning, interior design, natural lighting",
+              "best quality, 8k, architectural digest, unreal engine, photo from Pinterest, interior, cinematic photo, ultra-detailed, ultra-realistic, extremely detailed,intricate details, award-winning, interior design, rendered in vray, realistic light, natural lighting",
             n_prompt:
               "longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality",
           },
@@ -107,7 +109,7 @@ export default async function handler(
       let jsonFinalResponse = await finalResponse.json();
 
       if (jsonFinalResponse.status === "succeeded") {
-        generatedImage = jsonFinalResponse.output[1] as string;
+        generatedImage = jsonFinalResponse.output[0] as string;
       } else if (jsonFinalResponse.status === "failed") {
         break;
       } else {
