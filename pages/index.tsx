@@ -40,9 +40,12 @@ const Home: NextPage = () => {
           <div className="flex flex-col space-y-10 mt-4 mb-16">
             <div className="flex sm:space-x-8 sm:flex-row flex-col">
               <h3 className="mb-1 font-medium text-lg text-stone-700"></h3>
-                <Image className="ease-in duration-300 rounded-3xl sm:mt-0 mt-2 bg-[url('/1.jpg')] bg-center bg-cover  hover:bg-[url('/1-new.jpg')]  "
-                  width={600}
+              <Image
+                  alt="Generated photo of a room with sparkitect.co"
+                  width={400}
                   height={400}
+                  src="/1-new.jpg"
+                  className="ease-in duration-300 opacity-50 hover:opacity-100 w-full object-cover h-96 rounded-3xl sm:mt-0 mt-2"
 
                 
                 />
