@@ -45,10 +45,7 @@ const Home: NextPage = () => {
                   width={400}
                   height={400}
                   src="/1-new.jpg"
-                  className="ease-in duration-300 opacity-50 hover:opacity-100 w-full object-cover h-96 rounded-3xl sm:mt-0 mt-2"
-
-                
-                />
+                  className="ease-in duration-300 opacity-50 hover:opacity-100 w-full object-cover h-96 rounded-3xl sm:mt-0 mt-2" />
             
               <div className="sm:mt-0 mt-8">
                 <h3 className="mb-1 font-medium text-lg text-stone-700"></h3>
